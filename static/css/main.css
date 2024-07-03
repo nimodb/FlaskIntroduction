@@ -1,3 +1,5 @@
+/* main.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,4 +24,70 @@ h1, h2 {
 
 p {
     color: #6c757d;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.list-group-item-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.badge {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 0.25rem;
 }

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}To Do List{% endblock %}
+
+{% block content %}
+    <h2>Add New Todo</h2>
+    <form action="/todo" method="POST">
+        <div class="form-group">
+            <label for="content">Task Content:</label>
+            <input type="text" class="form-control" id="content" name="content" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Todo</button>
+    </form>
+
+    <hr>
+
+    <h2>To Do List</h2>
+    <ul class="list-group">
+        {% for task in tasks %}
+            <li class="list-group-item {% if task.completed %}list-group-item-success{% endif %}">
+                {{ task.content }}
+                <span class="badge badge-secondary">{{ task.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</span>
+            </li>
+        {% else %}
+            <li class="list-group-item">No Tasks yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
