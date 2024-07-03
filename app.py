@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, request
+from flask import Flask, render_template, redirect, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -47,7 +47,20 @@ def delete(id):
         db.session.commit()
         return redirect("/todo")
     except:
-        return "There was a problem deleting that task"
+        return "There was a problem deleting that task."
+
+
+@app.route("/update/<int:id>", methods=["POST"])
+def update(id):
+    task_to_update = Todo.query.get_or_404(id)
+    new_content = request.form["updated_content"]
+
+    try:
+        task_to_update.content = new_content
+        db.session.commit()
+        return redirect("/todo")
+    except:
+        return "There was a problem updating that task."
 
 
 if __name__ == "__main__":

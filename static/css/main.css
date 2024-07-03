@@ -82,6 +82,14 @@ button[type="submit"].btn-delete:hover {
     background-color: #c82333;
 }
 
+button[type="submit"].btn-update {
+    background-color: #ffc107;
+}
+
+button[type="submit"].btn-update:hover {
+    background-color: #e0a800;
+}
+
 .list-group-item {
     display: flex;
     justify-content: space-between;
