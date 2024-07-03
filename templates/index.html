@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Introduction</title>
-</head>
-<body>
-    <h1>Hello! World.</h1>
-    <p>Welcome to your first Flask app with templates.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h2>Welcome to Flask</h2>
+    <p>This is your first Flask app with template inheritance.</p>
+{% endblock %}
