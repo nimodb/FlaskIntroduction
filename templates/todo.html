@@ -19,6 +19,9 @@
         {% for task in tasks %}
             <li class="list-group-item {% if task.completed %}list-group-item-success{% endif %}">
                 {{ task.content }}
+                <form action="/delete/{{ task.id }}" method="POST">
+                    <button type="submit" class="btn btn-delete">Delete</button>
+                </form>
                 <span class="badge badge-secondary">{{ task.date_created.strftime('%Y-%m-%d %H:%M:%S') }}</span>
             </li>
         {% else %}

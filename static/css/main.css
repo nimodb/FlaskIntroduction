@@ -70,6 +70,18 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
+button[type="submit"].btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"].btn-delete:hover {
+    background-color: #c82333;
+}
+
 .list-group-item {
     display: flex;
     justify-content: space-between;
